@@ -7,6 +7,7 @@ apt install python
 apt-get install python python-pip -y
 pip install python-pip -y
 apt-get install git wget build-essential python-dev libffi-dev libssl-dev -y
+apt-get install python3-dev -y
 wget https://bootstrap.pypa.io/ez_setup.py -O - | python
 pip install --upgrade pip
 pip install --upgrade six
@@ -32,6 +33,8 @@ pip install croniter
 pip install elasticsearch
 pip install kibana
 pip install natsort
+pip install blist
+pip list
 cp -f config.yaml.example /.backup/elastalert.yml
 
 # purge

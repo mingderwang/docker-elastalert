@@ -14,6 +14,8 @@ cd /elastalert
 python setup.py install
 pip install -r requirements.txt
 pip install pytz
+pip install tzlocal
+pip install futures
 cp -f config.yaml.example /.backup/elastalert.yml
 
 # purge

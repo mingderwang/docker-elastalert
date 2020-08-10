@@ -16,6 +16,11 @@ pip install -r requirements.txt
 pip install pytz
 pip install tzlocal
 pip install futures
+pip install funcsigs
+pip install croniter
+pip install elasticsearch
+pip install kibana
+pip install django-compat
 cp -f config.yaml.example /.backup/elastalert.yml
 
 # purge

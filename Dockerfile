@@ -18,4 +18,5 @@ RUN /run/setup/elastalert.sh
 ENTRYPOINT ["/run/entrypoint.sh"]
 RUN apt-get install apt-utils -y
 RUN apt-get autoremove -y
-CMD ["python","/elastalert/elastalert/elastalert.py", "--config /etc/elastalert/elastalert.yml", "--verbose"]
+WORKDIR /elastalert
+CMD ["python", "-m", "elastalert.elastalert", "--config /etc/elastalert/elastalert.yml", "--verbose"]

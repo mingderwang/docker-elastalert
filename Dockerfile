@@ -1,4 +1,4 @@
-FROM debian:jessie
+FROM ecoron/python36-jessie-slim
 
 MAINTAINER Guillaume Simonneau <simonneaug@gmail.com>
 LABEL Description="elasticsearch elastalert"
@@ -8,6 +8,7 @@ ENV ELASTIC_PWD="changeme" \
     ELASTICSEARCH_PORT="9200"
 
 RUN apt-get update -y && apt-get install curl -y
+RUN apt-get install apt-utils -y
 ADD ./src/ /run/
 RUN chmod +x -R /run/
 
